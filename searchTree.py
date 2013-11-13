@@ -1,14 +1,14 @@
 import time 
 from math import log
-# Node: {parent, num_times_visited, (player_1_reward,player_2_reward)}
+# Node: {parent, num_times_visited, (player_1_reward,player_2_reward), (children_nodes), gameState}
 
 Class SearchTree:
-    self.searchTree = ({'parent':none, 'num_vist': 0, 'reward':(0.0,0.0)},'childs':[]) # root node
+    self.searchTree = ({'parent':none, 'num_vist': 0, 'reward':(0.0,0.0)},'childs':[],None) # root node
 
 # Defines heuristic for choosing the best child
     def pickChild(self,currNode,player):
-        
-        kids = self.generateChildren(currNode)
+        actions
+        kids = currNode.
         
         max = -100.0
         favorite = none
@@ -26,7 +26,7 @@ Class SearchTree:
         acts = getActions(node);  # TODO:: getActions() needs to be defined by the game state
         states = []
         for a in acts:
-            states.append(getState(node,a))  # getState() should return Node dictionaries
+            states.append(getState(node,a))  #TODO:: getState() should return Node dictionaries
         return states
 
 
