@@ -1,6 +1,6 @@
 from tictactoe import TicTacToe
 
-import globals
+import globalVals
 import sys, pygame
 from montecarlotree import MonteCarloMethod
 
@@ -12,12 +12,12 @@ def main():
     while (state.GetMoves() != []):
         print str(state)
         if state.playerJustMoved == 2:
-            m = mcts.TreeSearch(state, 15, False)
+            m = mcts.TreeSearch(state, 15, True)
         else:
             if len(sys.argv) > 1:
                 m = state.DoHumanMove()
             else:
-                m = mcts.TreeSearch(state, 15, False)
+                m = mcts.TreeSearch(state, 15, True)
         print 'Best Move: ' + str(m)
         state.DoMove(m)
 
